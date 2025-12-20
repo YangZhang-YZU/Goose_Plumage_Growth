@@ -26,7 +26,7 @@ To synthesize association signals across static weight measurements ($W_0-W_{10}
 The E-score is a weighted summation of association signals, where weights are derived from the genomic inflation factor ($\chi^2$) of each trait. This ensures that traits with higher heritability and signal-to-noise ratios contribute more to the final score.
 
 **Mathematical Formulation:**
-For a given SNP $i$ and a set of traits $\mathcal{G}$:
+For a given SNP $i$ and a set of traits $j$:
 
 $$E\left(i\right){\colon=}-\sum_{\mathcal{G}}{\frac{\sum_{j}^{\mathcal{G}}{max(0,{\bar{\chi}}_j^2-1})}{\sum_{\mathcal{G}}\sum_{j}^{\mathcal{G}}max\left(0,{\bar{\chi}}_j^2-1\right)}\log_{10}{P_{\mathcal{G},j}\left(i\right)}}$$
 
