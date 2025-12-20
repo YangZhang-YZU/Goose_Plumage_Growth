@@ -10,7 +10,7 @@ We performed two parallel GWAS runs for each growth trait:
 **The Delta ($\Delta$) Statistic:**
 We quantified the shift in association strength for each SNP using the $\Delta$ statistic:
 
-$$\Delta = -\log_{10}(P_{cond}) - [-\log_{10}(P_{uncond})]$$
+$$\Delta{\colon=}-\log_{10}{\left(p_{cond}\right)}-\left[-\log_{10}{\left(p_{uncond}\right)}\right]$$
 
 **Interpretation of Results:**
 The `calc_delta_significance.R` categorizes variants into three distinct classes:
@@ -28,7 +28,7 @@ The E-score is a weighted summation of association signals, where weights are de
 **Mathematical Formulation:**
 For a given SNP $i$ and a set of traits $\mathcal{G}$:
 
-$$E(i) = -\sum_{j \in \mathcal{G}} \left( \frac{\max(0, \bar{\chi}_j^2 - 1)}{\sum_{k} \max(0, \bar{\chi}_k^2 - 1)} \cdot \log_{10} P_{j}(i) \right)$$
+$$E\left(i\right){\colon=}-\sum_{\mathcal{G}}{\frac{\sum_{j}^{\mathcal{G}}{max(0,{\bar{\chi}}_j^2-1})}{\sum_{\mathcal{G}}\sum_{j}^{\mathcal{G}}max\left(0,{\bar{\chi}}_j^2-1\right)}\log_{10}{P_{\mathcal{G},j}\left(i\right)}}$$
 
 **Key Features:**
 * **Variance-Weighted:** Weights are automatically adjusted based on `Mean Chi2 - 1`, penalizing traits with no genomic inflation.
